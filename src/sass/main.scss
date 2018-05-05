@@ -1,0 +1,62 @@
+@font-face {
+font-family: "Futura Futuris C";
+  src: url('../fonts/FuturaFuturisC-Bold.eot');
+  src: url('../fonts/FuturaFuturisC-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaFuturisC-Bold.woff') format('woff'),
+  url('../fonts/FuturaFuturisC-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@font-face {
+font-family: "Futura Demi C";
+  src: url('../fonts/FuturaDemiC.eot?#iefix') format('embedded-opentype'),  url('../fonts/FuturaDemiC.otf')  format('opentype'),
+	     url('../fonts/FuturaDemiC.woff') format('woff'), url('../fonts/FuturaDemiC.ttf')  format('truetype'), url('../fonts/FuturaDemiC.svg#FuturaDemiC') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+font-family: "Futura Futuris Light C";
+  src: url('../fonts/FuturaLightC.eot?#iefix') format('embedded-opentype'),  url('../fonts/FuturaLightC.otf')  format('opentype'),
+	     url('../fonts/FuturaLightC.woff') format('woff'), url('../fonts/FuturaLightC.ttf')  format('truetype'), url('../fonts/FuturaLightC.svg#FuturaLightC') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
+font-family: "Futura Medium C";
+	src: url('../fonts/futuramediumc.eot');
+	src: local('☺'), url('../fonts/futuramediumc.woff') format('woff'), url('../fonts/futuramediumc.ttf') format('truetype'), url('../fonts/futuramediumc.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-width: 1px 1px 1px 2px;
+  border-color: #fff;
+  background-color: #f36d21;
+}
+
+
+
+::-webkit-scrollbar-track {
+  border-width: 1px;
+  background-color: #eee;
+  border-color: #fff;
+}
+@function vw($target) {
+  $vw-context: (1920 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+
+@import 'info/bootstrap';
+@import 'info/main';

@@ -1,0 +1,198 @@
+@import 'variables';
+
+*{
+  outline: none;
+}
+a:focus, a:hover, input:focus, input:hover {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  @import 'MediaQueries/main';
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: vw(28px) 0;
+  z-index: 99;
+  background: #fff;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 vw(16px);
+    a {
+      color: #000000;
+      font-family: "Futura Medium C";
+      font-size: vw(12px);
+      font-weight: 400;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.075rem;
+      transition: 0.2s;
+      &:hover {
+        background-color: #fee100;
+      }
+    }
+  }
+}
+
+.call-me {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: vw(16px);
+  font-weight: 400;
+  line-height: 1.313rem;
+  border: 0.125rem solid rgba(0, 0, 0, 0.22);
+  padding: vw(10px) vw(18px);
+  margin-left: vw(30px);
+  display: inline-block;
+  vertical-align: middle;
+  transition: 0.2s;
+  &:hover {
+    background-color: #fee100;
+    border-color: #fee100;
+  }
+}
+
+.text-right {
+  text-align: right
+}
+
+.mess {
+  display: inline-block;
+  vertical-align: middle;
+  svg {
+    transition: 0.2s;
+    &:hover {
+      fill: #fee100;
+    }}
+}
+
+.head {
+  background: url('../images/bg1.png') no-repeat 40% top;
+  background-size: cover;
+  padding-top: vw(218px);
+  padding-bottom: vw(189px);
+}
+
+.head-item {
+  p {
+    color: #696969;
+    font-family: "Futura Medium C";
+    font-size: vw(14px);
+font-weight: 400;
+line-height: vw(18px);
+    /* Text style for "10 днів ша" */
+    letter-spacing: 0.044rem;
+  }
+  h1 {
+    color: #000000;
+    font-family: "Futura Futuris C";
+    font-size: vw(80px);
+    font-weight: 700;
+    line-height: vw(86px);
+    text-transform: uppercase;
+    margin-bottom: vw(45px);
+  }
+  div {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(26px);
+    font-weight: 400;
+    line-height: vw(30px);
+    margin-bottom: vw(36px);
+  }
+}
+
+.head-right {
+  max-width: vw(480px);
+  
+  h3 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(20px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin-bottom: vw(30px);
+  }
+  span {
+    color: #000000;
+    font-family: "Futura Medium C";
+    font-size: vw(10px);
+    font-weight: 400;
+    line-height: vw(26px);
+    display: block;
+    margin-bottom: vw(21px);
+  }
+  h5 {
+    color: #000000;
+    font-family: "Futura Medium C";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+  p {
+    color: #696969;
+    font-family: "Futura Futuris Light C";
+    font-size: vw(16px);
+    font-weight: 400;
+    line-height: vw(18px);
+  }
+}
+
+.order-btn {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: vw(16px);
+  font-weight: 400;
+  line-height: vw(21px);
+  padding: vw(12px) vw(24px);
+  box-shadow: 0 8px 21px rgba(220, 212, 104, 0.45);
+  background-color: #fee100;
+}
+
+.head-box {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 5px solid #ffffff;
+  padding: vw(20px);
+  .title {
+    color: #ffffff;
+    font-family: "Futura Medium C";
+    font-size: vw(14px);
+    font-weight: 400;
+    line-height: vw(16px);
+    letter-spacing: vw(0.7px);
+    margin-bottom: vw(10px);
+  }
+  .price {
+    color: #ffffff;
+    font-family: "Futura Futuris C";
+    font-size: vw(24px);
+    font-weight: 700;
+    line-height: vw(18px);
+    letter-spacing: vw(1.2px);
+    span {
+      color: #ffffff;
+      font-size: vw(14px);
+      letter-spacing: vw(0.7px);
+    }
+  }
+}
+
+.ml-auto {
+  margin-left: auto;
+}
