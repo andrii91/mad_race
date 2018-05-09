@@ -9,7 +9,7 @@ a:focus, a:hover, input:focus, input:hover {
 }
 body {
   @import 'MediaQueries/main';
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 nav {
@@ -31,6 +31,11 @@ nav {
     display: inline-block;
     vertical-align: middle;
     margin: 0 vw(16px);
+      line-height: 1;
+    
+    img {
+      width: vw(91px);
+    }
     a {
       color: #000000;
       font-family: "Futura Medium C";
@@ -38,8 +43,8 @@ nav {
       font-weight: 400;
       line-height: 1;
       text-transform: uppercase;
-      letter-spacing: 0.075rem;
       transition: 0.2s;
+      letter-spacing: vw(1.2px);
       &:hover {
         background-color: #fee100;
       }
@@ -52,7 +57,7 @@ nav {
   font-family: "Futura Demi C";
   font-size: vw(16px);
   font-weight: 400;
-  line-height: 1.313rem;
+  line-height: vw(21px);
   border: 0.125rem solid rgba(0, 0, 0, 0.22);
   padding: vw(10px) vw(18px);
   margin-left: vw(30px);
@@ -82,7 +87,8 @@ nav {
 .head {
   background: url('../images/bg1.png') no-repeat 40% top;
   background-size: cover;
-  padding-top: vw(218px);
+  margin-top: vw(100px);
+  padding-top: vw(100px);
   padding-bottom: vw(189px);
 }
 
@@ -115,9 +121,18 @@ line-height: vw(18px);
   }
 }
 
+* {
+  line-height: 1;
+}
+
 .head-right {
-  max-width: vw(480px);
-  
+  max-width: vw(500px);
+  .row {
+    margin: 0;
+    .col {
+      padding: 0;
+    }
+  }
   h3 {
     color: #000000;
     font-family: "Futura Demi C";
@@ -133,14 +148,14 @@ line-height: vw(18px);
     font-weight: 400;
     line-height: vw(26px);
     display: block;
-    margin-bottom: vw(21px);
   }
   h5 {
     color: #000000;
     font-family: "Futura Medium C";
-    font-size: 16px;
+    font-size: vw(16px);
     font-weight: 400;
-    line-height: 26px;
+    line-height: vw(26px);
+    margin: 0;
   }
   p {
     color: #696969;
@@ -160,6 +175,50 @@ line-height: vw(18px);
   padding: vw(12px) vw(24px);
   box-shadow: 0 8px 21px rgba(220, 212, 104, 0.45);
   background-color: #fee100;
+  display: inline-block;
+  transition: 0.2s;
+      -webkit-animation: cta 1.5s linear infinite;
+    animation: cta 1.5s linear infinite;
+  &:hover {
+    box-shadow: 0 8px 21px rgba(220, 212, 104, 0.45);
+    background-color: #fff23f;
+  }
+}
+
+@-webkit-keyframes cta {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+
+	50% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1)
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+
+}
+
+@keyframes cta {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+
+	50% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1)
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+
 }
 
 .head-box {
@@ -195,4 +254,1198 @@ line-height: vw(18px);
 
 .ml-auto {
   margin-left: auto;
+}
+
+.bar-long {
+  background: #fee100;
+  position: fixed;
+  height: 5px;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.organizer {
+  padding: vw(199px) 0 vw(100px);
+}
+
+.organizer-title {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: vw(42px);
+  font-weight: 400;
+  line-height: vw(50px);
+  padding-left: vw(60px);
+  position: relative;
+  span {
+    display: inline-block;
+    width: vw(140px);
+    height: 0;
+    border: vw(5px) solid #000000;
+    margin-left: vw(20px);
+    vertical-align: middle;
+  }
+  &:before {
+    content: "Партнери";
+    position: absolute;
+    top: vw(50px);
+    left: 0;
+        transform-origin: left center;
+    transform: rotate(-90deg);
+    width: vw(60px);
+    color: #626262;
+    font-family: "Futura Medium C";
+    font-size: vw(14px);
+    font-weight: 400;
+    line-height: vw(18px);
+    letter-spacing: vw(0.7px);
+  }
+}
+
+.organizer-img {
+  text-align: center;
+  img {
+    max-width: vw(396px);
+    width: 100%;
+  }
+}
+
+.organizer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    width: vw(160px);
+    height: vw(80px);
+    background-color: #f7f7f7;
+    padding: vw(22px);
+    text-align: center;
+    margin-right: vw(24px);
+    margin-bottom: vw(30px);
+    &:nth-child(3),&:nth-child(6), &:nth-child(9){
+      margin-right: 0;
+    }
+    &:nth-child(7), &:nth-child(8), &:nth-child(9) {
+      margin-bottom: 0;
+    }
+    img {
+      max-height: 100%;
+    }
+  }
+}
+
+#scrollup {
+      position: fixed;
+    right: 20px;
+    bottom: 30px;
+    width: 30px;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    display: none;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 40px;
+    text-shadow: -2px 2px 5px rgba(0,0,0,0.3);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  svg {
+    transition: all .5s;
+    
+  }
+  &:hover {
+    svg {
+      fill:#fee100;
+    }
+  }
+}
+
+.section_1 {
+  min-height: vw(1242px);
+  background: url('../images/bg2.png') no-repeat center;
+  padding: vw(100px) 0;
+  position: relative;
+}
+
+.section_1-title {
+  float: right;
+  clear: both;
+  margin: 0;
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: vw(46px);
+  font-weight: 400;
+  line-height: vw(50px);
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    width: vw(110px);
+    height: vw(5px);
+    background:  #000000;
+  }
+}
+
+.section_1-info {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: vw(26px);
+  font-weight: 400;
+  line-height: vw(50px);
+  margin-top: vw(78px);
+  margin-bottom: vw(32px);
+  margin-left: vw(135px);
+}
+
+.section_1-item_left {
+  img {
+    max-width: vw(630px);
+    margin-bottom: vw(50px);
+  }
+  p {
+    max-width: vw(410px);
+    color: #797979;
+    font-family: "Futura Futuris Light C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin-bottom: vw(22px);
+    margin-left: auto;
+    margin-right: auto;
+    b {
+      color: #000000;
+      font-family: "Futura Medium C";
+      font-size: vw(18px);
+      font-weight: 400;
+      line-height: vw(24px);
+    }
+  }
+}
+
+.section_1-item_right {
+  margin-top: vw(94px);
+  max-width: vw(396px);
+  margin-left: auto;
+  img {
+    width: 100%;
+    margin-bottom: vw(55px);
+  }
+  h5 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(26px);
+    font-weight: 400;
+    line-height: vw(28px);
+    margin: 0 0 vw(20px);
+  }
+  p {
+    color: #797979;
+    font-family: "Futura Futuris Light C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin-bottom: vw(10px);
+    b {
+      color: #000000;
+      font-family: "Futura Medium C";
+    }
+  }
+  .order-btn {
+    margin-top: vw(28px);
+  }
+}
+
+.section_1-box {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: vw(20px);
+  font-weight: 400;
+  line-height: vw(28px);
+  display: inline-block;
+  max-width: vw(360px);
+  border: vw(5px) solid #000000;
+  padding: vw(50px) vw(80px) vw(50px) vw(50px);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section_2 {
+  min-height: vw(915px);
+  padding: vw(100px) 0;
+  background: url('../images/bg3.png') no-repeat center;
+  background-size: cover;
+}
+
+.section_2-title {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: vw(46px);
+  font-weight: 400;
+  line-height: vw(50px);
+  margin: 0 0 vw(35px);
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    width: vw(100px);
+    height: vw(5px);
+    background: #000000;
+    margin-left: vw(13px);
+  }
+}
+
+.section_2-info {
+  color: #797979;
+  font-family: "Futura Medium C";
+  font-size: vw(18px);
+  font-weight: 400;
+  line-height: vw(24px);
+  margin-bottom: vw(180px);
+}
+
+.section_2-info_bottom {
+  color: #626262;
+font-family: "Futura Medium C";
+font-size: vw(14px);
+font-weight: 400;
+line-height: vw(24px);
+letter-spacing: vw(0.7px);
+  span {
+    margin-left: vw(20px);
+    width: vw(80px);
+    height: vw(2px);
+    background: #626262;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.section_2-img {
+  text-align: center;
+  img {
+    max-width: vw(722px);
+  }
+}
+
+.section_2-item {
+  h4 {
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: vw(20px);
+      font-weight: 400;
+      line-height: vw(24px);
+      margin-bottom: vw(20px);
+  }
+  p {
+    color: #797979;
+    font-family: "Futura Futuris Light C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin: 0;
+    b {
+      color: #000000;
+      font-family: "Futura Medium C";
+      font-weight: 500;
+      position: relative;
+      z-index: 1;
+      &:before {
+        content: "";
+        width: 100%;
+        height: vw(5px);
+        background: #bbdff7;
+        position: absolute;
+        bottom: vw(3px);
+        left: 0;
+        z-index: -1;
+      }
+    }
+  }
+  margin-bottom: vw(40px);
+}
+
+.section_3 {
+  padding: vw(100px) 0;
+  margin-top:vw( -150px);
+}
+
+.section_3-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  &.left {
+    &:before {
+      content: "";
+      width: vw(711px);
+      height: vw(2px);
+      background: #e3e3e3;
+      position: absolute;
+      top: vw(48px);
+      right: vw(-22px);
+    }
+  }
+  &.right {
+    &:before {
+      content: "";
+      width: 110%;
+      height: vw(2px);
+      background: #e3e3e3;
+      position: absolute;
+      top: vw(48px);
+      right: 0;
+    }
+  }
+  li {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    padding-top: vw(102px);
+    margin-right: vw(50px);
+    span {
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: vw(30px);
+      font-weight: 400;
+      line-height: vw(21px);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:before {
+      content: attr(title);
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: vw(20px);
+      font-weight: 400;
+      line-height: vw(26px);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &:after {
+      content: "";
+      width: 5px;
+      height: 10px;
+      background: #272727;
+      position: absolute;
+      top: vw(48px);
+      left: 0;
+    }
+    h5 {
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: vw(20px);
+      font-weight: 400;
+      line-height: vw(21px);
+      margin: 0 0 vw(15px);
+    }
+    p {
+      color: #797979;
+      font-family: "Futura Futuris Light C";
+      font-size: vw(18px);
+      font-weight: 400;
+      line-height: vw(21px);
+      margin: 0;
+    }
+  }
+}
+
+.section_3-center {
+  text-align: center;
+  color: #3e799d;
+  font-family: "Futura Medium C";
+  font-size: vw(18px);
+  font-weight: 400;
+  line-height: vw(24px);
+  padding-bottom: vw(60px);
+  position: relative;
+  margin: 0 0 0 vw(-70px);
+  &:before {
+    content: "";
+    width: vw(62px);
+    height: vw(5px);
+    background: #3e799d;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.section_3-title {
+  text-align: right;
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: vw(46px);
+  font-weight: 400;
+  line-height: vw(50px);
+}
+
+.selection-video {
+  position: relative;
+  display: inline-block;
+  video {
+    width: vw(300px);
+    height: vw(310px);
+  }
+}
+
+.video-play {
+  width: vw(34px);
+  height: vw(34px);
+  border: 2px solid #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-30%);
+    border: 4.5px solid transparent;
+    border-left: 7px solid #fff;
+  }
+}
+
+.selection {
+  padding: vw(100px) 0;
+  background: url('../images/bg4.png') no-repeat center;
+  background-size: contain;
+}
+
+.selection-tite {
+  h2 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(46px);
+    font-weight: 400;
+    line-height: vw(50px);
+    margin-bottom: vw(25px);
+    margin-left: vw(132px);
+    span {
+      display: inline-block;
+      width: vw(114px);
+      height: vw(5px);
+      background: #000;
+      margin-left: vw(29px);
+    }
+  }
+  p {
+    margin-left: vw(132px);
+    color: #626262;
+    font-family: "Futura Medium C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    span {
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: vw(20px);
+      font-weight: 600;
+      position: relative;
+      z-index: 2;
+      &:before {
+        content: "";
+        width: 100%;
+        height: vw(8px);
+        background: #fee100;
+        position: absolute;
+        bottom: vw(3px);
+        left: 0;
+        z-index: -1;
+      }
+    }
+    .line {
+      width: vw(50px);
+      height: vw(2px);
+      background: #626262;
+      margin-right: vw(30px);
+      display: inline-block;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.selection-img {
+  img {
+    max-width: vw(630px);
+  }
+  margin-bottom: vw(120px);
+}
+
+.selection-box {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: vw(20px);
+  font-weight: 400;
+  line-height: vw(28px);
+  border: vw(5px) solid #000000;
+  display: inline-block;
+  padding: vw(60px) vw(80px) vw(60px) vw(60px);
+  margin-bottom: vw(110px);
+  margin-left: vw(137px);
+}
+
+.selection-item {
+  margin-left: vw(133px);
+  max-width: vw(630px);
+  h4 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(26px);
+    font-weight: 400;
+    line-height: vw(30px);
+    margin-bottom: vw(20px);
+  }
+  p {
+    color: #797979;
+    font-family: "Futura Futuris Light C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin-bottom: vw(36px);
+    b {
+      font-family: "Futura Medium C";
+      color: #626262;
+    line-height: 1.2;
+      margin-top: vw(25px);
+      display: block;
+    }
+  }
+}
+
+.video-container {
+  text-align: right;
+  margin-bottom: vw(65px);
+}
+
+.selection-right {
+  h4 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(26px);
+    font-weight: 400;
+    line-height: vw(32px);
+    margin-bottom: vw(60px);
+  }
+  img {
+    max-width: vw(498px);
+    margin-left: vw(133px);
+  }
+}
+
+.selection-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: vw(65px);
+  li {
+    margin-bottom: vw(25px);
+    padding-left: vw(21px);
+    position: relative;
+    &:before {
+      content: "";
+      width: vw(4px);
+      height: vw(4px);
+      background-color: #000000;
+      border-radius: 50%;
+      position: absolute;
+      top: vw(7px);
+      left: 0;
+    }
+    h5 {
+      color: #000000;
+      font-family: "Futura Medium C";
+      font-size: vw(18px);
+      font-weight: 400;
+      line-height: vw(26px);
+    }
+    p {
+      color: #797979;
+      font-family: "Futura Futuris Light C";
+      font-size: vw(18px);
+      font-weight: 400;
+      line-height: vw(21px);
+      margin-bottom: vw(18px);
+    }
+  }
+}
+
+.max-w500 {
+  max-width: vw(500px);
+}
+
+.stage-video {
+  position: relative;
+  display: inline-block;
+  margin-top: vw(96px);
+  video {
+    max-width: vw(630px);
+  }
+}
+
+.stage {
+  padding: vw(100px) 0;
+  background: url('../images/bg5.png') no-repeat center;
+  background-size: contain;
+  overflow: hidden;
+}
+
+.stage-img_top {
+  img {
+    max-width: vw(498px);
+  }
+}
+
+.container-left {
+  margin-top: vw(100px);
+  margin-left: vw(132px);
+}
+
+.stage-item_left {
+  h4 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(26px);
+    font-weight: 400;
+    line-height: vw(28px);
+    margin-bottom: vw(20px);
+  }
+  p {
+    color: #797979;
+    font-family: "Futura Futuris Light C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin-bottom: vw(30px);
+    b {
+      color: #000000;
+      font-family: "Futura Medium C";
+    }
+  }
+  margin-bottom: vw(100px);
+}
+
+.stage-slider {
+  padding-right: vw(33px);
+  position: relative;
+  margin-bottom: vw(190px);
+}
+
+.carousel-nav {
+  color: #797979;
+  font-family: "Futura Futuris C";
+  font-size: vw(12px);
+  font-weight: 700;
+  line-height: vw(28px);
+  width: vw(467px);
+  position: absolute;
+  text-align: right;
+  transform: rotate(90deg); 
+  transform-origin: left top;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 6;
+  margin-right:  vw(-467px);
+  .stage-count {
+    float: left;
+    clear: both;
+    width: vw(52px);
+  }
+  div {
+    display: inline-block;
+  }
+  .active {
+    color: #000000;
+    font-size: vw(18px);
+  }
+  .stage-prev {
+    margin-right: vw(30px);
+  }
+  .stage-prev, .stage-next {
+    cursor: pointer;
+    svg {
+      width: vw(26px);
+    }
+  }
+}
+
+.stage-item_left_botttom {
+  h4 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(26px);
+    font-weight: 400;
+    line-height: vw(28px);
+    margin-bottom: vw(20px);
+  }
+  p {
+    color: #797979;
+    font-family: "Futura Futuris Light C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+  }
+}
+
+.container-right {
+  margin-left: vw(127px);
+}
+
+.stage-title {
+  h2 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(46px);
+    font-weight: 400;
+    line-height: vw(50px);
+    margin-bottom: vw(28px);
+    span {
+      display: inline-block;
+      width: vw(114px);
+      height: vw(5px);
+      background: #000000;
+      vertical-align: middle;
+      margin-left: vw(19px);
+    }
+  }
+  p {
+    color: #626262;
+    font-family: "Futura Medium C";
+    font-size: vw(18px);
+    font-weight: 500;
+    line-height: vw(24px);
+    margin-bottom: vw(35px);
+    &.info {
+      margin-bottom: 0;
+      color: #797979;
+      font-family: "Futura Medium C";
+      font-size: vw(18px);
+      font-weight: 400;
+      line-height: vw(24px);
+    }
+    .line {
+      display: inline-block;
+      width: vw(50px);
+      height: vw(2px);
+      background: #626262;
+      margin-right: vw(30px);
+      vertical-align: middle;
+    }
+    b {
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: vw(20px);
+      font-weight: 600;
+      position: relative;
+      z-index: 1;
+      &:before {
+        content: "";
+        width: vw(132px);
+        height: vw(8px);
+        background: #fee100;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+      }
+      
+    }
+
+  }
+}
+
+.stage-item_right {
+  margin-top: vw(91px);
+  p {
+    color: #3e799d;
+    font-family: "Futura Medium C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin-bottom: vw(50px);
+  }
+  h3 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(26px);
+    font-weight: 400;
+    line-height: vw(28px);
+    padding-bottom: vw(28px);
+    position: relative;
+    margin-bottom: vw(40px);
+    &:before {
+      content: "";
+      width: 945px;
+      height: 2px;
+      background: #e3e3e3;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+.stage-box {
+  border: vw(4px) solid #000000;
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: vw(20px);
+  font-weight: 400;
+  line-height: vw(28px);
+  padding: vw(55px);
+  display: inline-block;
+  margin-top: vw(65px);
+  span {
+    font-family: "Futura Futuris C";
+    font-size: vw(48px);
+    font-weight: 700;
+  }
+  
+}
+
+.opportunity {
+  padding: vw(100px) 0;
+  overflow: hidden;
+}
+
+.opportunity-item {
+  margin-left: vw(132px);
+  h2 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(46px);
+    font-weight: 400;
+    line-height: vw(50px);
+    margin-bottom: vw(45px);
+    span {
+      display: inline-block;
+      width: vw(100px);
+      height: vw(5px);
+      background: #000000;
+      vertical-align: middle;
+      margin-left: vw(30px);
+    }
+  }
+  p {
+    opacity: 0.63;
+    color: #000000;
+    font-family: "Futura Medium C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin-bottom: vw(45px);
+  }
+}
+
+.opportunity-img {
+  img {
+    width: vw(945px);
+  }
+}
+
+.show {
+  padding: vw(100px) 0;
+  background: url('../images/s5f78ds7.jpg') no-repeat center;
+  background-size: contain;
+  position: relative;
+  z-index: 5;
+}
+
+.show-title {
+  h2 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(46px);
+    font-weight: 400;
+    line-height: vw(50px);
+    margin-bottom: vw(35px);
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      width: vw(110px);
+      height: vw(5px);
+      background: #000;
+    }
+  }
+  p {
+    opacity: 0.63;
+    color: #000000;
+    font-family: "Futura Medium C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin: 0;
+  }
+  margin-bottom: vw(35px);
+}
+
+.show-item_left {
+  h5 {
+    color: #000000;
+    font-family: "Futura Medium C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(26px);
+    margin-bottom: vw(10px);
+  }
+  p {
+    color: #797979;
+    font-family: "Futura Futuris Light C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+  }
+  margin-bottom: vw(25px);
+}
+
+.show-carousel {
+  max-width: vw(682px);
+  position: relative;
+  margin: 0 auto;
+  .owl-nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    &.disabled {
+      display: block;
+    }
+    .owl-prev {
+      float: left;
+      width: vw(92px);
+      height: vw(447px);
+      opacity: 0;
+      cursor: pointer;
+    }
+    .owl-next {
+      float: right;
+      width: vw(92px);
+      height: vw(447px);
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+  .owl-item {
+          padding-top: vw(59px);
+    position: relative;
+    p {
+      opacity: 0;
+    }
+    &.active {
+        width: vw(366px) !important;
+      
+      &.center {
+          width: vw(498px)!important;
+          margin: 0 vw(-280px);
+          position: relative;
+          z-index: 99;
+          margin-top: vw(-59px);
+          z-index: 99;
+        p {
+          opacity: 1;
+          text-align: center;
+          color: #000000;
+          font-family: "Futura Medium C";
+          font-size: vw(14px);
+          font-weight: 400;
+          line-height: vw(24px);
+          letter-spacing: vw(0.7px);
+          border-bottom: vw(2px) solid #e3e3e3;
+          margin: vw(40px) 0 0;
+          position: relative;
+          span {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.show-item_right {
+  h5 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(20px);
+    font-weight: 400;
+    line-height: vw(26px);
+    margin-bottom: vw(10px);
+  }
+  p {
+    color: #797979;
+    font-family: "Futura Futuris Light C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin: 0;
+  }
+  margin-bottom: vw(45px);
+}
+
+.how_to_get {
+  background: url('../images/528v7d.png') no-repeat center;
+  background-size: 100%;
+  margin-top: vw(-50px);
+  padding: vw(100px) 0 vw(216px);
+  position: relative;
+  z-index: 1;
+}
+
+.how_to_get-item_left {
+  img {
+    max-width: vw(630px);
+  }
+  .box {
+    margin-top: vw(129px);
+    padding-left: vw(132px);
+    h4 {
+      color: #000000;
+      font-family: "Futura Demi C";
+      font-size: vw(26px);
+      font-weight: 400;
+      line-height: vw(30px);
+      margin-bottom: vw(20px);
+    }
+    p {
+      color: #797979;
+      font-family: "Futura Futuris Light C";
+      font-size: vw(18px);
+      font-weight: 400;
+      line-height: vw(24px);
+      margin-bottom: 0;
+    }
+  }
+}
+
+.how_to_get-item_right {
+  margin-top: vw(80px);
+  h2 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 50px;
+    margin-bottom: 25px;
+    span {
+      width: 140px;
+      height: 5px;
+      background: #000;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  p {
+    opacity: 0.63;
+    color: #000000;
+    font-family: "Futura Medium C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin-bottom: vw(95px);
+  }
+  img {
+    max-width: vw(496px);
+  }
+}
+
+.price_block {
+  padding: vw(64px) 0 vw(150px);
+  overflow: hidden;
+}
+
+.price-title {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: vw(46px);
+  font-weight: 400;
+  line-height: vw(50px);
+  margin-bottom: vw(55px);
+  span {
+    width: vw(188px);
+    height: vw(5px);
+    background: #000;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.price-container {
+  padding-left: vw(132px);
+  
+}
+
+.price-item {
+  padding-bottom: vw(35px);
+  max-width: vw(396px);
+  
+  * {
+    padding: 0;
+  }
+  p {
+    color: rgba(0,0,0, 0.63);
+    font-family: "Futura Medium C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    b {
+      color: #000000;
+      font-family: "Futura Medium C";
+      font-size: vw(18px);
+      font-weight: 400;
+      line-height: vw(24px);
+      span {
+        font-size: vw(30px);
+      }
+    }
+  }
+}
+
+.box-border {
+  border-top: vw(2px) solid #e3e3e3;
+  max-width: vw(366px);
+  padding-top: vw(30px);
+}
+
+.timer-info {
+  color: #696969;
+  font-family: "Futura Medium C";
+  font-size: vw(14px);
+  font-weight: 400;
+  line-height: vw(18px);
+  /* Text style for "Ціна стане" */
+  letter-spacing: vw(0.7px);
+  margin-bottom: vw(20px);
+}
+
+.price-video {
+  position: relative;
+    width: vw(945px);
+  video {
+    width: 100%;
+  }
+}
+
+#countdown_1 {
+  margin-bottom: vw(45px);
 }
