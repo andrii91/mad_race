@@ -229,6 +229,18 @@ $(function () {
 
     }
   });
+  $('#countdown_2').countdown({
+    timestamp: ts,
+    callback: function (days, hours, minutes, seconds) {
+
+    }
+  });
+  $('#countdown_3').countdown({
+    timestamp: ts,
+    callback: function (days, hours, minutes, seconds) {
+
+    }
+  });
   $('.countDays').append('<span class="title">днів</span>');
   $('.countHours').append('<span class="title">годин</span>');
   $('.countMinutes').append('<span class="title">хвилин</span>');
@@ -421,5 +433,14 @@ $(document).ready(function () {
       }
     }
   });
+  
+  $('.faq-item ').click(function(){
+    $(this).toggleClass('active');
+    $(this).find('.more').slideToggle(200);
+  });
+  
+  $('.mob-btn').click(function(){
+    $('.menu').slideToggle('200');
+  })
 
 });

@@ -27,15 +27,15 @@ nav {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
+  vertical-align: middle;
   li {
     display: inline-block;
     vertical-align: middle;
     margin: 0 vw(16px);
       line-height: 1;
     
-    img {
-      width: vw(91px);
-    }
+    
     a {
       color: #000000;
       font-family: "Futura Medium C";
@@ -176,12 +176,15 @@ line-height: vw(18px);
   box-shadow: 0 8px 21px rgba(220, 212, 104, 0.45);
   background-color: #fee100;
   display: inline-block;
-  transition: 0.2s;
-      -webkit-animation: cta 1.5s linear infinite;
-    animation: cta 1.5s linear infinite;
+  transition: 1s;
+      -webkit-animation: cta 1s linear infinite;
+    animation: cta 1s linear infinite;
+  cursor: pointer;
   &:hover {
     box-shadow: 0 8px 21px rgba(220, 212, 104, 0.45);
     background-color: #fff23f;
+    transform: scale(1.1);
+    animation: none;
   }
 }
 
@@ -1447,5 +1450,619 @@ letter-spacing: vw(0.7px);
 }
 
 #countdown_1 {
-  margin-bottom: vw(45px);
+  margin-bottom: vw(25px);
+}
+
+.receive {
+  background: url('../images/bg7.png') no-repeat center;
+  padding-bottom: vw(100px);
+  background-size: 100%;
+}
+
+.receive-title {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: vw(26px);
+  font-weight: 400;
+  line-height: vw(32px);
+  width: vw(368px);
+  span {
+    width: vw(79px);
+    height: vw(5px);
+    background: #000000;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.border_01 {
+  &:before {
+    content: "";
+    width: vw(193px);
+    height: vw(1px);
+    background: #e3e3e3;
+    position: absolute;
+    top: vw(48px);
+    left: 0;
+  }
+}
+
+.receive-center {
+  text-align: center;
+  padding: vw(38px) 0 vw(42px);
+  width: vw(370px);  
+  position: relative;
+  margin-bottom: vw(70px);
+  &:before, &:after {
+    content: "";
+    width: 102px;
+    height: 5px;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &:after {
+    bottom: 0;
+    top: inherit;
+  }
+  span {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(26px);
+    display: inline-block;
+    margin-bottom: vw(15px);
+  }
+  h5 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(20px);
+    font-weight: 400;
+    line-height: vw(21px);
+    margin-bottom: vw(15px);
+  }
+  p {
+    color: #797979;
+    font-family: "Futura Futuris Light C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin-bottom: 0;
+  }
+}
+
+.border_03 {
+  &:before {
+    width: vw(681px); 
+  }
+}
+
+.border_05 {
+  &:before {
+    width: vw(1370px);
+    left: vw(-183px);
+  }
+}
+
+.receive-info {
+  color: #3e799d;
+  font-family: "Futura Medium C";
+  font-size: vw(18px);
+  font-weight: 400;
+  line-height: vw(26px);
+}
+
+.mt145 {
+  margin-top: vw(145px);
+}
+
+.receive-bg {
+  position: relative;
+  
+  padding: vw(110px) 0 vw(105px);
+  &:before {
+    content: "";
+    width: vw(945px);
+  background-color: #dff1fc;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 15px;
+  }
+  h4 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(20px);
+    font-weight: 400;
+    line-height: vw(24px);
+  }
+}
+
+.receive-item {
+  padding-bottom: vw(30px);
+  position: relative;
+  max-width: vw(397px);
+  margin-bottom: vw(30px);
+border-bottom: vw(5px) solid #000000;
+  .col-6 {
+    padding: 0;
+  }
+  h5 {
+    color: #a7b1b8;
+    font-family: "Futura Medium C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin-bottom: vw(16px);
+  }
+  p {
+    color: #000000;
+    font-family: "Futura Medium C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin: 0;
+    span {
+      font-size: vw(30px);
+    }
+  }
+}
+
+.date-item {
+  color: #000000;
+  font-family: "Futura Medium C";
+  font-size: vw(18px);
+  font-weight: 400;
+  line-height: vw(24px);
+  span {
+    display: inline-block;
+    color: #797979;
+    font-family: "Futura Futuris Light C";
+    margin-left: vw(20px);
+  }
+}
+
+.timer-box {
+  margin-bottom: vw(25px);
+}
+
+.receive-form {
+  h3 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(26px);
+    font-weight: 400;
+    line-height: vw(30px);
+    margin-bottom: vw(20px);
+    span {
+      display: inline-block;
+      width: vw(79px);
+      height: vw(5px);
+      background: #000;
+      vertical-align: middle;
+    }
+  }
+  p {
+    color: #626262;
+    font-family: "Futura Medium C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin-bottom: vw(50px);
+    &.info {
+      color: #aaaaaa;
+      font-family: "Futura Medium C";
+      font-size: vw(14px);
+      font-weight: 400;
+      line-height: vw(18px);
+      letter-spacing: vw(0.7px);
+    }
+  }
+  
+}
+
+.form {
+  span {
+    display: inline-block;
+    margin-bottom: vw(50px);
+    input {
+      border: 0;
+      color: #000000;
+      font-family: "Futura Medium C";
+      font-size: vw(18px);
+      font-weight: 400;
+      line-height: 1;
+      width: 100%;
+      display: block;
+      padding: vw(10px) vw(20px) vw(16px) vw(20px);
+        
+    }
+   max-width: vw(184px);
+    border-bottom: vw(2px) solid #e3e3e3;
+    margin-right: vw(20px);
+    &:last-child{
+      margin-right: 0;
+    }
+    position: relative;
+    &:before {
+      content: "";
+      height: vw(23px);
+      border-left: vw(2px) solid #e3e3e3;
+      width: 0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    &:after {
+      content: "";
+      height: vw(23px);
+      border-right: vw(2px) solid #e3e3e3;
+      width: 0;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  button {
+    border: 0;
+  }
+  margin-bottom: vw(49px);
+}
+
+.faq {
+  padding: vw(100px) 0;
+}
+
+.faq-title {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: vw(46px);
+  font-weight: 400;
+  line-height: vw(50px);
+  margin-bottom: vw(125px);
+}
+
+.faq-info {
+  color: #626262;
+  font-family: "Futura Medium C";
+  font-size: vw(14px);
+  font-weight: 400;
+  line-height: vw(24px);
+  letter-spacing: vw(0.7px);
+  margin: 0;
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    width: vw(80px);
+    height: vw(2px);
+    background: #626262;
+    margin-left: vw(30px);
+  }
+}
+
+.faq-item {
+   font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(21px);
+      cursor: pointer;
+  position: relative;
+    transition: 0.2s;
+  max-width: vw(330px);
+  &:before {
+    content: "+";
+     color: #000000;
+    font-family: "Futura Medium C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(21px);
+    position: absolute;
+    top: vw(5px);
+    right: 0;
+    transition: 0.2s;
+  }
+  &.active {
+    &:before {
+      content: "-";
+    }
+  }
+  h5 {
+    color: #000000;
+    font-family: "Futura Medium C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(21px);
+    margin: 0 0 vw(10px);
+  }
+  margin-bottom: vw(25px);
+  .more {
+    display: none;
+  }
+}
+
+.questions {
+  background: url('../images/bg8.png') no-repeat center;
+  background-size: 100%;
+  padding-top: vw(100px);
+  padding-bottom: vw(198px);
+  overflow: hidden;
+}
+
+.questions-item {
+  h2 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(46px);
+    font-weight: 400;
+    line-height: vw(50px);
+    margin-bottom: vw(60px);
+    span {
+      width: vw(79px);
+      height: vw(5px);
+      background: #000;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  p {
+    color: #626262;
+    font-family: "Futura Medium C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin-bottom: vw(20px);
+  }
+  .order-btn {
+    margin-bottom: vw(40px);
+  }
+}
+
+.questions-img {
+  img {
+    max-width: vw(945px);
+  }
+}
+
+.registration-title {
+  color: #000000;
+  font-family: "Futura Demi C";
+  font-size: vw(46px);
+  font-weight: 400;
+  line-height: vw(50px);
+  margin-bottom: vw(35px);
+ 
+}
+
+.registration-info {
+color: rgba(0,0,0, .63);
+font-family: "Futura Medium C";
+font-size: vw(18px);
+font-weight: 400;
+line-height: vw(24px);
+   span {
+    display: inline-block;
+    vertical-align: middle;
+    width: vw(72px);
+    height: vw(5px);
+   background: #000;
+     margin-right: vw(30px);
+  }
+}
+
+.registration-item {
+  p {
+      color: #797979;
+      font-family: "Futura Futuris Light C";
+      font-size: vw(18px);
+      font-weight: 400;
+      line-height: vw(24px);
+      margin-bottom: vw(35px);
+    b {
+      font-family: "Futura Medium C";
+      position: relative;
+        border-bottom: vw(5px) solid #bbdff7;
+      line-height: vw(10px);
+    }
+  }
+  h5 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(20px);
+    font-weight: 400;
+    line-height: vw(26px);
+    margin-bottom: vw(10px);
+  }
+  >span {
+   display: block;
+    color: #000000;
+    font-family: "Futura Medium C";
+    font-size: vw(14px);
+    font-weight: 400;
+    line-height: vw(24px);
+    letter-spacing: vw(0.7px);
+    margin-top: vw(60px);
+    .line {
+      display: inline-block;
+      width: vw(80px);
+      height: vw(2px);
+      background: #626262;
+      vertical-align: middle;
+      margin-left: vw(30px);
+    }
+  }
+}
+
+.registration {
+  margin-top: vw(200px);
+  
+  .info {
+    max-width: vw(498px);
+    color: #aaaaaa;
+    font-family: "Futura Medium C";
+    font-size: vw(14px);
+    font-weight: 400;
+    line-height: vw(18px);
+    letter-spacing: vw(0.7px);
+  }
+  .form {
+    max-width: vw(498px);
+    background-color: #f9f9f9;
+    padding: vw(87px) vw(102px) vw(100px);
+    text-align: center;
+    margin-bottom: vw(19px);
+    span {
+      display: block;
+      max-width: 100%;
+      margin-right: 0;
+      input {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.registration-item_right {
+  h3 {
+    color: #000000;
+    font-family: "Futura Demi C";
+    font-size: vw(20px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin-bottom: vw(25px);
+    margin-top: vw(45px);
+  }
+  .date-item  {
+    font-family: "Futura Medium C";
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+    margin-bottom: vw(20px);
+  }
+  h5 {
+    opacity: 0.63;
+    color: #000000;
+    font-family: "Futura Medium C";
+    font-size: vw(14px);
+    font-weight: 400;
+    line-height: vw(24px);
+    letter-spacing: vw(0.7px);
+  }
+  p {
+    font-size: vw(18px);
+    font-weight: 400;
+    line-height: vw(24px);
+  }
+  .receive-item {
+    border-bottom: vw(2px) solid #e3e3e3;
+    margin-top: vw(50px);
+  }
+  .timer-info {
+    color: #696969;
+    font-family: "Futura Medium C";
+    font-size: vw(14px);
+    font-weight: 400;
+    line-height: vw(18px);
+    letter-spacing: vw(0.7px);
+  }
+}
+
+footer {
+  background-color: #dff1fc;
+  padding: vw(60px) 0 vw(54px);
+}
+
+.footer-logo {
+  img {
+    max-width: vw(111px);
+    margin-bottom: vw(42px);
+  }
+  p {
+    color: #929ea6;
+    font-family: "Futura Futuris Light C";
+    font-size: vw(14px);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: vw(0.53px);
+    margin: 0;
+  }
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    a {
+      display: block;
+      color: #a3bac8;
+      font-family: "Futura Futuris Light C";
+      font-size: vw(16px);
+      font-weight: 400;
+      line-height: vw(34.4px);
+    }
+  }
+}
+
+.footer-address {
+  color: #000000;
+  font-family: "Futura Medium C";
+  font-size: vw(16px);
+  font-weight: 400;
+  line-height: vw(24px);
+}
+
+.contacts {
+  >a {
+    display: block;
+    color: #000000;
+    font-family: "Futura Medium C";
+    font-size: vw(16px);
+    font-weight: 400;
+    line-height: vw(26px);
+  }
+  .social {
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: vw(12px);
+   
+    }
+    img {
+      height: vw(15px);
+    }
+  }
+}
+
+.pay-logo {
+  padding-top: vw(23px);
+  img {
+    height: vw(31px);
+  }
+}
+
+.col-container {
+  width: vw(255px);
+  .call-me {
+    margin-left: vw(37px);
+    float: right;
+  }
+  
+}
+
+.mob-btn {
+  display: none;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  img {
+      width: vw(91px);
+    }
 }
