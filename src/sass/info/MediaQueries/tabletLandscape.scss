@@ -2,4 +2,44 @@
 
 @media #{$tabletLandscape} {
     @import '../desktop';
+  .md-center {
+      text-align: left;
+    }
+  .stage-box {
+    display: none;
+  }
+  .show {
+    br {
+      display: none;
+    }
+  }
+  .show-title h2 span {
+    display: none;
+  }
+  .show-title h2 {
+    margin-bottom: 0;
+  }
+  .show-title {
+    margin-bottom: 10px;
+  }
+  .show-item_left {
+    margin-bottom: 0;
+    display: inline-block;
+   
+  }
+  .faq-title {
+    font-size: 34px;
+  }
+  .faq-item {
+    padding-right: 15px;
+  }
+   footer .col {
+    -ms-flex: 0 0 100%;
+    flex: 1;
+    max-width: 100%;
+    margin-bottom: 0px;
+}
+  .footer-list li a {
+    line-height: 1.2;
+  }
 }

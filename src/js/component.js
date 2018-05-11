@@ -449,6 +449,17 @@ $(document).ready(function () {
 
   $('.mob-btn').click(function () {
     $('.menu').slideToggle('200');
-  })
+  });
+  
+   $('.scroll').click(function (e) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+
+    $('body,html').animate({
+      scrollTop: top - 30
+    }, 1500);
+
+  });
 
 });

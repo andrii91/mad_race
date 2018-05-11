@@ -37,7 +37,7 @@ gulp.task('js_v', function() {
             'src/js/vendor/jquery.js',
             'src/js/vendor/jquery.viewportchecker.min.js',
             'src/js/vendor/owl.carousel.min.js',
-            // 'src/js/vendor/jquery.inputmask.js',
+            'src/js/vendor/jquery.fancybox.min.js',
             // 'src/js/vendor/jquery.animateNumber.min.js',
             // 'src/js/vendor/jquery.scrollTo.js',
             // 'src/js/vendor/jquery.waypoints.min.js',
