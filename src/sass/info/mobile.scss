@@ -102,6 +102,13 @@
   }
   .countdownHolder {
     width: 100%;
+    font-size: 24px;
+    text-align: center;
+    .position {
+    font-size: 24px;
+      
+      
+    }
   }
   .countdownHolder > span .title {
     font-size: 14px;
@@ -559,7 +566,7 @@
       }
     }
     li {
-
+      max-width: 49%;
       vertical-align: top;
       position: relative;
       padding-top: 70px;
@@ -632,7 +639,7 @@
     line-height: 24px;
     padding-bottom: 60px;
     position: relative;
-    margin: 0 0 0 ;
+    margin: 0 0 20px ;
     &:before {
       content: "";
       width: 62px;
@@ -647,9 +654,10 @@
 
   .section_3-title {
     text-align: center;
-    font-size: 24px;
+    font-size: 40px;
     line-height: 1.2;
-    margin-top: 40px;
+    margin-top: 0px;
+    margin-bottom: 20px;
   }
 
   .selection-video {
@@ -694,6 +702,7 @@
       line-height: 1.2;
       margin-bottom: 25px;
       margin-left: 0px;
+      margin-top: 25px;
       span {
 
         width: 114px;
@@ -1104,10 +1113,7 @@
   }
 
   .show {
-    padding: 50px 0;
-    background: url('../images/s5f78ds7.jpg') no-repeat center;
-    position: relative;
-    z-index: 5;
+    padding: 0px 0 50px;
   }
 
   .show-title {
@@ -1117,7 +1123,7 @@
     h2 {
       font-size: 24px;
       line-height: 1.2;
-      margin-bottom: 35px;
+      margin-bottom: 15px;
       span {
         width: 110px;
         height: 5px;
@@ -1136,6 +1142,13 @@
   }
 
   .show-item_left {
+        vertical-align: top;
+    max-width: 49%;
+    display: inline-block;
+    &:last-child {
+      max-width: 100%;
+      text-align: center;
+    }
     h5 {
 
       font-family: "Futura Medium C";
@@ -1189,11 +1202,14 @@
       p {
         opacity: 0;
       }
+      img {
+        width: 100%;
+      }
       &.active {
-        width: 290px !important;
+        width: 100% !important;
 
         &.center {
-          width: 290px!important;
+          width: 100%!important;
           margin: 0;
           position: relative;
           z-index: 99;
@@ -1214,7 +1230,7 @@
             span {
               position: absolute;
               bottom: 0;
-              right: 0;
+              right: 15px;
             }
           }
         }
@@ -1239,7 +1255,7 @@
       line-height: 24px;
       margin: 0;
     }
-    margin-bottom: 45px;
+    margin-bottom: 25px;
   }
 
   .how_to_get {
@@ -1304,10 +1320,15 @@
   }
 
   .price_block {
-    padding: 64px 0 150px;
+    padding: 64px 0 50px;
     overflow: hidden;
   }
 
+  h2 {
+    br {
+      display: block;
+    }
+  }
   .price-title {
 
 
@@ -1359,13 +1380,14 @@
     border-top: 2px solid #e3e3e3;
     max-width: 366px;
     padding-top: 30px;
+    text-align: center;
   }
 
   .timer-info {
     color: #696969;
     font-family: "Futura Medium C";
     font-size: 14px;
-
+text-align: center;
     line-height: 18px;
     /* Text style for "Ціна стане" */
     letter-spacing: 0.7px;
@@ -1374,7 +1396,8 @@
 
   .price-video {
     position: relative;
-    width: 945px;
+    margin-top: 25px;
+    width: 100%;
     video {
       width: 100%;
     }
@@ -1385,8 +1408,12 @@
   }
 
   .receive {
-    background: url('../images/bg7.png') no-repeat center;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
+    .section_3-list  {
+      li {
+        max-width: 100%;
+      }
+    }
   }
 
   .receive-title {
@@ -1420,9 +1447,11 @@
   .receive-center {
     text-align: center;
     padding: 38px 0 42px;
-    width: 370px;
+    width: 310px;
     position: relative;
     margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
     &:before,
     &:after {
       content: "";
@@ -1464,6 +1493,9 @@
       margin-bottom: 0;
     }
   }
+  h2 {
+    font-size: 26px !important;
+  }
 
   .border_03 {
     &:before {
@@ -1482,31 +1514,32 @@
     color: #3e799d;
     font-family: "Futura Medium C";
     font-size: 18px;
-
+    text-align: center;
     line-height: 26px;
+    width: 310px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .mt145 {
-    margin-top: 145px;
+    margin-top: 50px;
   }
 
   .receive-bg {
     position: relative;
 
-    padding: 110px 0 105px;
+    padding: 50px 0;
     &:before {
       content: "";
       width: 945px;
       height: 100%;
       position: absolute;
       top: 0;
-      right: 15px;
+      right: -15px;
     }
     h4 {
-
-
+      text-align: center;
       font-size: 20px;
-
       line-height: 24px;
     }
   }
@@ -1523,7 +1556,7 @@
     h5 {
       color: #a7b1b8;
       font-family: "Futura Medium C";
-      font-size: 18px;
+      font-size: 17px;
 
       line-height: 24px;
       margin-bottom: 16px;
@@ -1531,7 +1564,7 @@
     p {
 
       font-family: "Futura Medium C";
-      font-size: 18px;
+      font-size: 15px;
 
       line-height: 24px;
       margin: 0;
@@ -1545,7 +1578,7 @@
 
     font-family: "Futura Medium C";
     font-size: 18px;
-
+text-align: center;
     line-height: 24px;
     span {
 
@@ -1560,10 +1593,12 @@
   }
 
   .receive-form {
+    margin-top: 25px;
+    text-align: center;
     h3 {
 
 
-      font-size: 18px;
+      font-size: 24px;
 
       line-height: 1.2;
       margin-bottom: 20px;
@@ -1597,7 +1632,7 @@
   .form {
     span {
 
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       input {
         border: 0;
 
@@ -1610,9 +1645,9 @@
         padding: 10px 20px 16px 20px;
 
       }
-      max-width: 184px;
+      max-width: 100%;
       border-bottom: 2px solid #e3e3e3;
-      margin-right: 20px;
+      margin-right: 0px;
       &:last-child {
         margin-right: 0;
       }
@@ -1639,20 +1674,19 @@
     button {
       border: 0;
     }
-    margin-bottom: 49px;
+    margin-bottom: 20px;
   }
 
   .faq {
-    padding: 100px 0;
+    padding: 0px 0 50px;
   }
 
   .faq-title {
 
 
     font-size: 24px;
-
+    margin-bottom: 10px;
     line-height: 1.2;
-    margin-bottom: 125px;
   }
 
   .faq-info {
@@ -1662,7 +1696,7 @@
 
     line-height: 24px;
     letter-spacing: 0.7px;
-    margin: 0;
+    margin: 0 0 30px;
     span {
 
 
@@ -1675,7 +1709,7 @@
 
   .faq-item {
     font-size: 18px;
-
+    padding-right: 12px;
     line-height: 21px;
     cursor: pointer;
     position: relative;
@@ -1714,37 +1748,30 @@
 
   .questions {
     background: url('../images/bg8.png') no-repeat center;
-    padding-top: 100px;
-    padding-bottom: 198px;
+    padding-top: 0px;
+    padding-bottom: 58px;
     overflow: hidden;
   }
 
   .questions-item {
+    text-align: center;
+    margin-bottom: 20px;
     h2 {
-
-
       font-size: 24px;
-
       line-height: 1.2;
-      margin-bottom: 60px;
       span {
         width: 79px;
         height: 5px;
-
-
-
       }
     }
     p {
       color: #626262;
       font-family: "Futura Medium C";
       font-size: 18px;
-
       line-height: 24px;
-      margin-bottom: 20px;
     }
     .order-btn {
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
   }
 
@@ -1760,7 +1787,6 @@
     font-size: 24px;
 
     line-height: 1.2;
-    margin-bottom: 35px;
 
   }
 
@@ -1782,17 +1808,10 @@
 
   .registration-item {
     p {
-
-
       font-size: 18px;
-
       line-height: 24px;
-      margin-bottom: 35px;
       b {
-        font-family: "Futura Medium C";
-        position: relative;
         border-bottom: 5px solid #bbdff7;
-        line-height: 10px;
       }
     }
     h5 {
@@ -1811,20 +1830,18 @@
 
       line-height: 24px;
       letter-spacing: 0.7px;
-      margin-top: 60px;
       .line {
 
         width: 80px;
         height: 2px;
         background: #626262;
 
-        margin-left: 30px;
       }
     }
   }
 
   .registration {
-    margin-top: 200px;
+    margin-top: 50px;
 
     .info {
       max-width: 498px;
@@ -1837,7 +1854,7 @@
     }
     .form {
       max-width: 498px;
-      padding: 87px 102px 100px;
+      padding: 50px;
       text-align: center;
       margin-bottom: 19px;
       span {
@@ -1892,20 +1909,25 @@
       color: #696969;
       font-family: "Futura Medium C";
       font-size: 14px;
-
+    text-align: center;
       line-height: 18px;
       letter-spacing: 0.7px;
     }
   }
 
   footer {
-    padding: 60px 0 54px;
+    padding: 30px 0 24px;
+    text-align: center;
+    .col {
+      -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    }
   }
 
   .footer-logo {
     img {
-      max-width: 111px;
-      margin-bottom: 42px;
+      max-width: 100px;
     }
     p {
       color: #929ea6;
@@ -1921,7 +1943,7 @@
   .footer-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 20px 0;
     li {
       a {
         display: block;
@@ -1929,7 +1951,7 @@
 
         font-size: 16px;
 
-        line-height: 34.4px;
+        line-height: 1.2;
       }
     }
   }
@@ -1960,24 +1982,33 @@
       }
       img {
         height: 15px;
+        width: inherit;
       }
     }
   }
 
   .pay-logo {
-    padding-top: 23px;
+    padding-top: 20px;
+    margin-bottom: 20px;
     img {
       height: 31px;
+      max-width: 100%;
+      width: inherit;
     }
   }
 
   .col-container {
-    width: 255px;
+    width: 100%;
     .call-me {
-      margin-left: 37px;
-      float: right;
+      margin-left: 0;
+      float: none;
+      display: block;
+      margin-top: 10px;
     }
 
   }
-
+.xs-first {
+    -ms-flex-order: -1;
+    order: -1;
+}
 }

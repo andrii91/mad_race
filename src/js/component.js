@@ -433,13 +433,21 @@ $(document).ready(function () {
       }
     }
   });
-  
-  $('.faq-item ').click(function(){
+
+  if ($(window).width() < 736) {
+    $('.show-carousel .owl-item').css({
+      'max-width': $(window).width(),
+    })
+    $('.show-carousel').css({
+      'max-height': '480px',
+    })
+  }
+  $('.faq-item ').click(function () {
     $(this).toggleClass('active');
     $(this).find('.more').slideToggle(200);
   });
-  
-  $('.mob-btn').click(function(){
+
+  $('.mob-btn').click(function () {
     $('.menu').slideToggle('200');
   })
 
